@@ -31,3 +31,9 @@ cx = float(x)
 import random
 random_num = random.randrange(1,10)
 print(random_num)
+
+# Python Casting
+x = int(1) # int() - constructs 
+y = int(2.8)
+z = int("3") # z will be 3
+m = str(3.0) // '3.0'
