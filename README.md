@@ -22,7 +22,7 @@ print(char)
 
 ## string object does not support iitem assignment
 
-### substring 
+## substring 
 <pre>
 substring = my_string[1:5] # start:stop
 print(substring)
@@ -42,13 +42,13 @@ sentance = greeting + ' ' +name
 print(sentance)
 </pre>
 
-### loop
+## loop
 <pre>
 for i in sentance:
     print(i)    
 </re>
 
-## heck 
+## check 
 <pre>
 if 'e' in sentance:
     print('True')
@@ -68,7 +68,7 @@ my_string = my_string.strip() # not change original str
 print(my_string)
 </re>
 
-## pper
+## upper, lower
 <pre>
 my_string = 'hellow world'
 upper_str = my_string.upper()
@@ -135,7 +135,7 @@ stop = timer()
 print(stop - start) # 0.2591306699998768
 </pre>
 
-### good 
+## good 
 <pre>
 start = timer()
 my_string = ''.join(my_list)
@@ -171,7 +171,7 @@ my_string = 'the variable is {:.2f} and {}'.format(var, var2)
 print(my_string)
 </pre>
 
-# f-strings (recommand)
+## f-strings (recommand)
 <pre>
 print(f' the variable is {var} and {var2}')
 </pre>
