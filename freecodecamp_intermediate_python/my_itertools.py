@@ -1,5 +1,5 @@
 # Itertools: product, permutations, combinations, accumulate, grouplate, groupby, and infinite iterators
-from itertools import product, permutations, combinations, combinations_with_replacement, accumulate, groupby
+from itertools import product, permutations, combinations, combinations_with_replacement, accumulate, groupby, count, cycle, repeat
 import operator
 # product
 a = [1,2]
@@ -83,6 +83,26 @@ def smaller_than(x):
     return x < 3
 
 g = [1,2,3,4]
-gr = groupby(g, key=smaller_than)
+gr = groupby(g, key=smaller_than) # key=lambda x: x < 3
 for key, val in gr:
     print(key,list(val))
+
+# count 
+for i in count(10):
+    print(i)
+    if i == 15:
+        break
+
+# cycle
+a = [1,2,3]
+for i in cycle(a):
+    print(i)
+    if i == 3:
+        break
+
+# repeat
+a = [1,2,3]
+for i in repeat(a):
+    print(i)
+    if i == 3:
+        break
