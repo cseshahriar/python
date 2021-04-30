@@ -1,6 +1,6 @@
 # Python learning repository
 
-## Strings: ordered, immutable, text representation
+# Strings: ordered, immutable, text representation
 <pre>
 my_string = "Hello World"
 print(my_string)
@@ -20,9 +20,9 @@ char = my_string[0]
 print(char)
 </pre>
 
-## string object does not support iitem assignment
+# string object does not support iitem assignment
 
-## substring 
+# substring 
 <pre>
 substring = my_string[1:5] # start:stop
 print(substring)
@@ -42,13 +42,13 @@ sentance = greeting + ' ' +name
 print(sentance)
 </pre>
 
-## loop
+# loop
 <pre>
 for i in sentance:
     print(i)    
-</re>
+</pre>
 
-## check 
+# check 
 <pre>
 if 'e' in sentance:
     print('True')
@@ -56,17 +56,17 @@ else:
     print('False')
 </re>
 
-##usefull methods
+# usefull methods
 <pre>
 my_string = '    Hello World  '
 print(my_string)
-</re>
+</pre>
 
 ## emove whitespace
 <pre>
 my_string = my_string.strip() # not change original str
 print(my_string)
-</re>
+</pre>
 
 ## upper, lower
 <pre>
@@ -114,12 +114,12 @@ my_str = ' '.join(my_list)
 print(my_str)
 </pre>
 
-## list tricks
+# list tricks
 <pre>
 my_list = ['a'] * 1000000
 </pre>
 
-## check time complexity
+# check time complexity
 <pre>
 from timeit import default_timer as timer
 </pre>
@@ -143,7 +143,7 @@ stop = timer()
 print(stop - start) # 0.2591306699998768
 </pre>
 
-## formate : %s, format(), f-string
+# formate : %s, format(), f-string
 
 ## str
 <pre>
