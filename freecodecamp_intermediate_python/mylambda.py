@@ -29,3 +29,10 @@ print(filter_data)
 # same with list comprenshion
 list_data = [x for x in f if x % 2 == 0]
 print(list_data)
+
+# reduce func: apply a particular function passed in its argument to all of the list elements
+# return a single value
+import functools
+r = [1, 2, 3, 4] # 24
+prod_a = functools.reduce(lambda x,y: x * y , r) # two arg req
+print(prod_a)
