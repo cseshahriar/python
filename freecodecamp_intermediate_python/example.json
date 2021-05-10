@@ -1,0 +1,17 @@
+{
+    "first_name": "Shahriar",
+    "last_name": "Hosen",
+    "hobbies": ["running", "swimming", "singing"],
+    "age": 28,
+    "hasChildren": true,
+    "children": [
+        {
+            "name": "alex",
+            "age": 5
+        },
+        {
+            "name": "bob",
+            "age": 6
+        }
+    ]
+}
