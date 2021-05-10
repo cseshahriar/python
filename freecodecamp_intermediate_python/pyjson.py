@@ -22,5 +22,11 @@ person = {
 }
 
 # py dict to json(serialization or encoding)
+# dumps for string
 personJson = json.dumps(person, indent=4, sort_keys=True) # separators=('; ', '= ')
 print(personJson)
+
+# py dict to a write file 
+# dump for file
+with open('person.json', 'w') as file:
+    json.dump(person, file, indent=4) # object, file
