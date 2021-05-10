@@ -65,5 +65,6 @@ class UserEncoder(JSONEncoder):
 
 
 # user_json = json.dumps(user, default=encode_user) # func arg
-user_json = json.dumps(user, cls=UserEncoder) # class arg
+# user_json = json.dumps(user, cls=UserEncoder) # class arg
+user_json = UserEncoder().encode(user)
 print(user_json)
