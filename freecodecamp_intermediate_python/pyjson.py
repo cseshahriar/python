@@ -48,7 +48,7 @@ class User:
 
 user = User('Shahriar', 28)
 
-# custom encoding functions
+# ============ custom encoding functions ====================
 def encode_user(obj):
     if isinstance(obj, User):
         return {'name': obj.name, 'age': obj.age, obj.__class__.__name__:True}
@@ -68,3 +68,12 @@ class UserEncoder(JSONEncoder):
 # user_json = json.dumps(user, cls=UserEncoder) # class arg
 user_json = UserEncoder().encode(user)
 print(user_json)
+
+# ============ custom decoding =================
+def decode_user(dct):
+    if User.__name__ in dct:
+        return User(name=dct['name'], age=dct['age'])
+    return dct
+
+user = json.loads(user_json, object_hook=decode_user) # custom func decoding uses
+print(user.name, user.age)
