@@ -21,7 +21,7 @@ person = {
     "titles": ["Engineer", "Programmer"]
 }
 
-# py dict to json(serialization or encoding)
+# ============ py dict to json(serialization or encoding) ====================
 # dumps for string
 personJson = json.dumps(person, indent=4, sort_keys=True) # separators=('; ', '= ')
 print(personJson)
@@ -30,3 +30,13 @@ print(personJson)
 # dump for file
 with open('person.json', 'w') as file:
     json.dump(person, file, indent=4) # object, file
+
+# =============== de serialization or decoding (json to py) =================
+person_loads_json = json.loads(personJson) # loads for string
+print(person_loads_json)
+
+
+# json file to python file write
+with open('person.json', 'r') as file:
+    person_jsno_to_py = json.load(file) 
+    print(person_jsno_to_py)
