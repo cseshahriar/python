@@ -55,5 +55,15 @@ def encode_user(obj):
     else:
         raise TypeError('Object of type User is not json serializable')
 
-user_json = json.dumps(user, default=encode_user)
+from json import JSONEncoder
+class UserEncoder(JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, User):
+            return {'name': obj.name, 'age': obj.age, obj.__class__.__name__:True}
+        else:
+            return JSONEncoder.default(self, obj)
+
+
+# user_json = json.dumps(user, default=encode_user) # func arg
+user_json = json.dumps(user, cls=UserEncoder) # class arg
 print(user_json)
