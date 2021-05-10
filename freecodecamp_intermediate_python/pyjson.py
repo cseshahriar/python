@@ -40,3 +40,20 @@ print(person_loads_json)
 with open('person.json', 'r') as file:
     person_jsno_to_py = json.load(file) 
     print(person_jsno_to_py)
+
+class User:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+user = User('Shahriar', 28)
+
+# custom encoding functions
+def encode_user(obj):
+    if isinstance(obj, User):
+        return {'name': obj.name, 'age': obj.age, obj.__class__.__name__:True}
+    else:
+        raise TypeError('Object of type User is not json serializable')
+
+user_json = json.dumps(user, default=encode_user)
+print(user_json)
