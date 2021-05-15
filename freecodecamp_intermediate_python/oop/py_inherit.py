@@ -37,10 +37,27 @@ class Designer(Employee): # child class
 # instance
 se = SoftwareEngineer('Shahriar', 28, 20000, 'Junior')
 print(f'Name: {se.name} Age: {se.age}')
-se.work()
+# se.work()
 print(se.level) # level only work for software engineer
-se.debug()
+# se.debug()
 
 d = Designer('Salpin', 28, 20000)
-d.work()
-d.draw()
+# d.work()
+# d.draw()
+
+
+# polymorphisom
+
+# employees collection
+employees = [
+    SoftwareEngineer('Shahriar', 28, 20000, 'Junior'),
+    SoftwareEngineer('Salpin', 28, 20000, 'Junior'),
+    Designer('John', 28, 20000)
+]
+
+def motivate_employees(employees):
+    for employee in employees:
+        employee.work() # employee has many work, thant's is polymorphisom
+
+motivate_employees(employees)
+
