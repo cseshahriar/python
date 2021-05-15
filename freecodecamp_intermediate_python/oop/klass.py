@@ -32,6 +32,16 @@ class SoftwareEngibeer:
     def __eq__(self, other):
         return self.name == other.name and self.age == other.age
 
+    # its working like class methods, it's not working for instance methods
+    @staticmethod
+    def entry_sallary(age):
+        """ can't access self """
+        if age < 25:
+            return 5000
+        if age < 30:
+            return 7000
+        return 9000
+
 
 # instance
 se1 = SoftwareEngibeer('Shahriar', 28, "Junior", 20000)
@@ -51,3 +61,6 @@ se1.code()
 se1.code_in_languages('Python')
 
 print(se1 == se2) # true
+
+print(SoftwareEngibeer.entry_sallary(24))
+print(se1.entry_sallary(27))
