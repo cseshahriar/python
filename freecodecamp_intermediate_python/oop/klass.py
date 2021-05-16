@@ -9,7 +9,7 @@ class SoftwareEngibeer:
     # class attributes
     alias = "Keyword Magician"
 
-    def __init__(self, name, age, lavel, salary):
+    def __init__(self, name: str, age: int, lavel: str, salary: int):
         # instance attributes
         self.name = name
         self.age = age
