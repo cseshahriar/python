@@ -65,7 +65,25 @@ mycursor = mydb.cursor()
 
 # select from table
 mycursor.execute("SELECT * FROM customers")
+# mycursor.execute("SELECT name, address FROM customers")
 myresult = mycursor.fetchall()
 
 for x in myresult:
   print(x)
+
+#Select With a Filter
+sql = "SELECT * FROM customers WHERE address ='Park Lane 38'"
+# sql = "SELECT * FROM customers WHERE address LIKE '%way%'"
+
+mycursor.execute(sql)
+
+myresult = mycursor.fetchall()
+
+for x in myresult:
+  print(x)
+
+# delete
+sql = "DELETE FROM customers WHERE address = 'Mountain 21'"
+mycursor.execute(sql)
+mydb.commit()
+print(mycursor.rowcount, "record(s) deleted")
