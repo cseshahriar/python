@@ -55,3 +55,17 @@ mycursor = mydb.cursor()
 # mycursor.executemany(sql, val)
 # mydb.commit()
 # print(mycursor.rowcount, "was inserted.")
+
+# Get Inserted ID
+# sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
+# val = ("Michelle", "Blue Village")
+# mycursor.execute(sql, val)
+# mydb.commit()
+# print("1 record inserted, ID:", mycursor.lastrowid)
+
+# select from table
+mycursor.execute("SELECT * FROM customers")
+myresult = mycursor.fetchall()
+
+for x in myresult:
+  print(x)
